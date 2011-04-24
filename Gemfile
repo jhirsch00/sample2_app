@@ -13,10 +13,11 @@ gem 'sqlite3'
 # end
   
 group :development do
-   gem 'rspec-rails' , '2.0.0.beta.18'
+   gem 'rspec-rails' 
  end  
 
 group :test do
-   gem 'rspec' , '2.0.0.beta.18'
+   gem 'rspec'   
+   gem 'spork', '0.9.0.rc3'
  end  
 
