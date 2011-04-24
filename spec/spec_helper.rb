@@ -1,5 +1,6 @@
 require 'rubygems'
-require 'spork'
+require 'spork'  
+require 'webrat'
 
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However, 
@@ -25,7 +26,8 @@ RSpec.configure do |config|
   # config.mock_with :rr
   config.mock_with :rspec
 
-  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  config.fixture_path = "#{::Rails.root}/spec/fixtures"       
+  config.include Webrat::Matchers, :type => :views
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
   # examples within a transaction, comment the following line or assign false
